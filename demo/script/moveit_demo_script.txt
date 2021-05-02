@@ -1,0 +1,7 @@
+use robot1
+go Home
+go PreGrasp
+do down 0.01
+go PreDrop
+go up 0.1
+go Home
