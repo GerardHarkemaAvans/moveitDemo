@@ -91,6 +91,7 @@ def simple_pick_place():
   ## You can plan a cartesian path directly by specifying a list of waypoints
   ## for the end-effector to go through.
   waypoints = []
+
   # start with the current pose
   current_pose = robot1_group.get_current_pose()
   rospy.sleep(0.5)
@@ -131,7 +132,7 @@ def simple_pick_place():
   robot1_client.send_goal(robot1_goal)
   robot1_client.wait_for_result()
 
-  robot1_group.set_named_target("R1Place")
+  robot1_group.set_named_target("PreDrop")
   robot1_plan_place = robot1_group.plan()
   robot1_goal = moveit_msgs.msg.ExecuteTrajectoryGoal()
   robot1_goal.trajectory = robot1_plan_place
