@@ -101,9 +101,9 @@ def simple_pick_place():
   new_eef_pose = geometry_msgs.msg.Pose()
 
   # Manual offsets because we don't have a camera to detect objects yet.
-  new_eef_pose.position.x = current_pose.pose.position.x + 0.10
-  new_eef_pose.position.y = current_pose.pose.position.y - 0.20
-  new_eef_pose.position.z = current_pose.pose.position.z - 0.10
+  new_eef_pose.position.x = current_pose.pose.position.x + 0
+  new_eef_pose.position.y = current_pose.pose.position.y - 0
+  new_eef_pose.position.z = current_pose.pose.position.z - 0.05
 
   # Retain orientation of the current pose.
   new_eef_pose.orientation = copy.deepcopy(current_pose.pose.orientation)
